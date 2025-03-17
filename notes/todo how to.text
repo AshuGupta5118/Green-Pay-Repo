@@ -1,0 +1,243 @@
+# TODO List with Detailed Steps
+
+commented for now:
+        - **Rewards Feature**
+        1. Open `lib/screens/home_screen.dart`
+        2. Implement the rewards section (line 370)
+        3. Create a rewards dashboard showing available points
+        4. Add redemption options and history
+        5. Implement rewards tracking system
+
+        ## 2. Profile Screen Implementation
+        - **PIN Change Feature**
+        1. Open `lib/screens/profile_screen.dart`
+        2. Implement the PIN change functionality (line 229)
+        3. Create a secure PIN input screen with current PIN verification
+        4. Add new PIN input with confirmation
+        5. Connect to auth service to update PIN
+
+## 3. Settings Screen Implementation
+- **API Integration for User Settings**
+  1. Open `lib/screens/settings_screen.dart`
+  2. Implement loading user settings from API (line 65)
+  3. Create API endpoints for fetching and updating user settings
+  4. Add loading state while fetching settings
+
+- **Save Settings to API**
+  1. Implement saving notification settings (line 87)
+  2. Implement saving theme settings (line 95)
+  3. Implement saving language settings (line 106)
+  4. Implement saving security settings (line 126)
+  5. Add success/error handling for settings updates
+
+- **Navigation Implementation**
+  1. Implement about screen navigation (line 196)
+  2. Implement help screen navigation (line 202)
+  3. Implement privacy policy screen/webview (line 208)
+  4. Implement terms of service screen/webview (line 214)
+
+## 4. Login Screen Implementation
+- **Registration Navigation**
+  1. Open `lib/screens/login_screen.dart`
+  2. Implement navigation to registration screen (line 226)
+  3. Create a registration screen if not already existing
+  4. Add form validation and user creation flow
+
+## 5. Contacts Screen Implementation
+- **Transaction History Feature**
+  1. Open `lib/screens/contacts_screen.dart`
+  2. Implement transaction history display (line 184)
+  3. Fetch transaction data from API for the specific contact
+  4. Create a transaction list view with filtering options
+
+- **Payment Feature**
+  1. Implement direct payment to contact (line 195)
+  2. Create payment amount input screen
+  3. Add payment confirmation and processing
+  4. Update transaction history after successful payment
+
+- **Messaging Feature**
+  1. Implement messaging functionality (line 200)
+  2. Create a chat interface for the contact
+  3. Implement message sending and receiving
+  4. Add notifications for new messages
+
+- **Add Contact Feature**
+  1. Implement add contact functionality (line 389)
+  2. Create a form for adding new contact details
+  3. Add validation and duplicate checking
+  4. Implement contact syncing with device contacts
+
+## 6. Budget Screen Implementation
+- **Add Budget Dialog**
+  1. Open `lib/screens/budget_screen.dart`
+  2. Implement add budget dialog (line 421)
+  3. Create a form for budget category, amount, and period
+  4. Add validation and submission handling
+  5. Update budget list after successful creation
+
+## 7. Backend Deployment
+Follow the detailed steps in `backend/TODO.md`:
+1. Complete Heroku setup
+2. Configure GitHub repository
+3. Set up MongoDB Atlas
+4. Implement security configurations
+5. Set up UPI integration
+6. Configure monitoring services
+7. Set up SSL/TLS
+8. Configure backup systems
+9. Complete testing procedures
+10. Update documentation
+11. Finalize frontend-backend integration
+12. Complete the final checklist items
+
+## 8. Android Configuration
+1. Open `android/app/build.gradle`
+2. Update the application ID (line 43) with your unique identifier
+3. Configure signing for release builds (line 55)
+
+
+# Additional TODO Items and Detailed Steps
+
+## 9. Data Model Fixes
+
+- **Fix Transaction Model**
+  1. Review `lib/models/transaction.dart` and `frontend/lib/models/transaction.dart`
+  2. Ensure proper handling of double values in JSON parsing
+  3. Add null safety checks for latitude/longitude values
+  4. Standardize the model across frontend and main app
+
+- **Fix Budget Model**
+  1. Review `lib/models/budget.dart` and `frontend/lib/models/budget.dart`
+  2. Add proper null safety for spent and limit values
+  3. Ensure consistent handling of double values
+  4. Standardize the model across frontend and main app
+
+## 10. Payment Service Implementation
+
+- **Complete Payment Processing**
+  1. Review `lib/services/payment_service.dart`
+  2. Ensure proper handling of amount values
+  3. Implement error handling for payment failures
+  4. Add transaction status tracking
+  5. Implement payment receipt generation
+
+## 11. API Integration
+
+- **Complete API Service**
+  1. Ensure all API endpoints are properly implemented
+  2. Add proper error handling for network failures
+  3. Implement token refresh mechanism
+  4. Add request/response logging for debugging
+  5. Implement retry logic for failed requests
+
+## 12. Offline Support
+
+- **Enhance Database Service**
+  1. Improve the sync mechanism in `lib/services/database_service.dart`
+  2. Add conflict resolution for offline changes
+  3. Implement background sync when connection is restored
+  4. Add progress indicators for sync operations
+  5. Implement data compression for storage efficiency
+
+## 13. Security Enhancements
+
+- **Secure Storage Implementation**
+  1. Review `lib/utils/secure_storage.dart`
+  2. Ensure all sensitive data is properly encrypted
+  3. Implement key rotation mechanism
+  4. Add biometric authentication for accessing sensitive data
+  5. Implement secure deletion of data
+
+## 14. Performance Optimization
+
+- **UI Performance**
+  1. Implement lazy loading for lists
+  2. Add pagination for large data sets
+  3. Optimize image loading and caching
+  4. Reduce unnecessary rebuilds
+  5. Implement memory management for large screens
+
+- **Network Performance**
+  1. Implement request batching
+  2. Add data compression for API requests/responses
+  3. Optimize payload sizes
+  4. Implement connection quality detection
+  5. Add adaptive quality for images based on connection
+
+## 15. Testing
+
+- **Unit Tests**
+  1. Create tests for all models
+  2. Test service classes
+  3. Implement mocks for external dependencies
+  4. Add coverage reporting
+
+- **Widget Tests**
+  1. Test key UI components
+  2. Verify navigation flows
+  3. Test form validation
+  4. Verify error handling in UI
+
+- **Integration Tests**
+  1. Test end-to-end flows
+  2. Verify API integration
+  3. Test offline functionality
+  4. Verify data persistence
+
+## 16. Accessibility
+
+- **Implement Accessibility Features**
+  1. Add semantic labels to all UI elements
+  2. Ensure proper contrast ratios
+  3. Support screen readers
+  4. Implement keyboard navigation
+  5. Add support for dynamic text sizes
+
+## 17. Internationalization
+
+- **Add Multi-language Support**
+  1. Extract all hardcoded strings
+  2. Create translation files
+  3. Implement locale switching
+  4. Add RTL support for appropriate languages
+  5. Test with different locales
+
+## 18. Analytics and Monitoring
+
+- **Implement Analytics**
+  1. Add user behavior tracking
+  2. Implement crash reporting
+  3. Add performance monitoring
+  4. Create custom events for key actions
+  5. Set up dashboards for monitoring
+
+## 19. Documentation
+
+- **Code Documentation**
+  1. Add documentation for all public APIs
+  2. Document complex algorithms
+  3. Add usage examples
+  4. Create architecture diagrams
+
+- **User Documentation**
+  1. Create user guides
+  2. Add in-app help
+  3. Create FAQ section
+  4. Add tooltips for complex features
+
+## 20. CI/CD Pipeline
+
+- **Set Up Continuous Integration**
+  1. Configure GitHub Actions
+  2. Add automated testing
+  3. Implement code quality checks
+  4. Set up dependency scanning
+
+- **Set Up Continuous Deployment**
+  1. Configure automated builds
+  2. Set up staging environment
+  3. Implement automated deployment
+  4. Add release notes generation
+
+These tasks should be prioritized based on your project timeline and resources. Consider creating a project board in GitHub or using a task management tool to track progress on these items.
